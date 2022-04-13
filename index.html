@@ -39,9 +39,9 @@
                 }
               },
               {
-                breakpoint: 600,
+                breakpoint: 575,
                 settings: {
-                  slidesToShow: 1,
+                  slidesToShow: 3,
                   arrows: false,
                 }
               }
@@ -51,8 +51,8 @@
         } );
     </script>
     <style>
-
-        * { box-sizing: border-box; }
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+        * { box-sizing: border-box; font-family: 'Black Han Sans', sans-serif;}
        
         /*-- header --------------------------------------------------------------------------------*/
         #header{
@@ -129,10 +129,7 @@
             font-size: 20px;
             padding-top: 20px;
         }
-        .slick-prev:before {
-            color: black;
-        }
-        .slick-next:before {
+        .slick-prev:before, .slick-next:before {
             color: black;
         }
         /*-- liset 끝 --*/
@@ -162,7 +159,7 @@
            padding-bottom:20px;
         }
       
-        #contents-box .col-sm-12{
+        #contents-box .col-md-12{
             height: 300px;
             background-size: cover;
             background-repeat: no-repeat;
@@ -226,9 +223,14 @@
         @media (max-aspect-ratio: 16/9) {
             .video-foreground { width: 300%; left: -100%; }
         }
+        
+        @media screen and (max-width:575px){
+            #video h1{left:10px !important;font-size: 30px;}
+            #midv{
+                width: 70%;
+                height: auto;
+            }
 
-        @media screen and (max-width:767px){
-            #video h1{ left: 10px !important; font-size: 30px;}
         }
         /*스마트폰 화면 끝*/
     </style>
@@ -302,19 +304,19 @@
     <!-- 입점 신청 화면 ------------------------------------------------------------------------------>
     <div id="store" class="container text-center">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <h1>사장님, 쿠팡이츠로<br>
                 매출을 늘려보세요!</h1>
                 <a href="#" class="btn">쿠팡이츠 입점신청하기</a>
             </div>
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <h1>틈나는 시간,<br>
                 배달을 시작해보세요</h1>
                 <a href="#" class="btn">배달 파트너 신청하기</a>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <h1>지금 쿠팡이츠로<br>
                 주문을 해야 하는 이유</h1>
                 <p>
@@ -324,8 +326,8 @@
                     이젠, 맛집도 쿠팡이츠로 주문하세요.
                 </p>    
             </div>
-            <div class="col-sm-6">
-                <img src="img/pic01.png">
+            <div class="col-md-6">
+                <img id="midv" src="img/pic01.png">
             </div>
         </div>
     </div>
@@ -335,8 +337,8 @@
     <div id="contents-box" class="container-fluid">
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
-                    <div class="col-sm-12 c01">
+                <div class="col-md-4">
+                    <div class="col-md-12 c01">
                         <div class="caption">
                             <h2>음식이 뜨거워요?!<br>
                                 음식이 식기전에 도착!</h2>
@@ -345,8 +347,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="col-sm-12 c02">
+                <div class="col-md-4">
+                    <div class="col-md-12 c02">
                         <div class="caption">
                             <h2>어디쯤 왔는지<br>
                                 마음 졸이고 있나요?</h2>
@@ -355,8 +357,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="col-sm-12 c03">
+                <div class="col-md-4">
+                    <div class="col-md-12 c03">
                         <div class="caption">
                             <h2>실패없는 맛집탐험<br>
                                 치타배달</h2>
@@ -378,7 +380,6 @@
         <p class="sp">구매 및 제휴 문의<br>
         할인쿠폰 구매 문의: eats_bd@coupang.com<br>
         마케팅/제휴 문의: eats@coupang.com<br></p>
-        <a href="#" class="btn">기업용 쿠팡이츠 쿠폰 구매 신청하기</a>
     </div>
     <!-- 고객문의 끝 -->
 
